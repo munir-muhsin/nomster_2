@@ -6,16 +6,16 @@
 <br/><br/>
 <p><%= @place.description %></p>
 
-
+<% if @place.latitude.present? && @place.longitude.present? %>
 
   
   <script>
 
     function initMap() {
-      var myLatLng = {lat: -25.363, lng: 131.044};
+      var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
 
       var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
+        zoom: 12,
         center: myLatLng
       });
 
@@ -28,9 +28,10 @@
   </script>
 
   <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp0Mo_Icz0TU70ac07IF9KN5e2DE9XUfE&callback=initMap">
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCv8TTTZyxodu_5ptifv4FyailBDtc0YyQ&callback=initMap">
   </script>
 <div id="map"></div>
+<% end %>
 
 <div class="float-right">
   <% if current_user && current_user == @place.user %>
