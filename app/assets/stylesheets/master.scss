@@ -19,11 +19,20 @@ h1, h2, h3, h4, h5, h6 {
   padding:0;
 }
 body {
-  background: url('/assets/crossword.png');
+  background: image_url('crossline-dots.png');
   font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
 .navbar-inverse .navbar-brand {
-  font-family: 'Open Sans Condensed', sans-serif;
+color: red;
+  font-family: "Hlevetica Neue", Helvetica, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  font-size: 50px
+  }
+  
+  .navbar {
+  background: image_url('fancy-cushion.png');
+  box-shadow: 0px 1px 3px #2a2a2a;
 }
 .invalid-feedback {
   color: #ff3333;
@@ -37,7 +46,7 @@ body {
     .clear {
     clear: both;
     }
-    blockquote {
+   blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
   margin: 1.5em 10px;
