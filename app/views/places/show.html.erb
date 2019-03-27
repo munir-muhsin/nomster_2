@@ -29,9 +29,18 @@
       });
     }
 
+
+
   </script>
+
+  <style>
+#map {
+  height: 300px;
+}
+</style>
+
   <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCv8TTTZyxodu_5ptifv4FyailBDtc0YyQ&callback=initMap">
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPnA_90rZsbfl8F9L_j5NXHiSgcVNWd4w&callback=initMap">
   </script>
 <div id="map"></div>
 <% end %>
@@ -80,7 +89,7 @@
      <!-- Button trigger modal --> 
     
 <button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myPhotoModal"> 
-      add photo 
+      Add Photo 
      </button>
 <div class = "clear"></div> 
    <br /> 
@@ -92,14 +101,14 @@
        
         <b> <%= image_tag photo.picture.url, class: 'img-fluid', :size => "400x180" %></b> <br />
          <%=  photo.caption %><br /> 
-      
+     
      
   <% end %> 
 
       <% end %>   
+
  </div>
- </div>
-     
+     </div> 
   
    
 
