@@ -1,4 +1,4 @@
-<div class= "booyah-box">
+<div class= "booyah-box ">
   <div class="row">
     <div class="col-4">
 
@@ -11,10 +11,13 @@
    <h4><%= @user.comments.where(rating: '5_stars').count %> total 5 star reviews </h4>
    </div>
    </div>
+   
   <div class="clear"></div>
 </div>
  <br /><br />
-<h1 class= "text-center">My Comments</h1>
+ <div class="booyah-box col-10 offset-1">
+<h1 class= "text-center ">My Comments</h1>
+
  <br /><br />
 <div class="row">
 <% @user.comments.each do |comment| %>
@@ -28,6 +31,28 @@
      
       <small><%= comment.user.email %></small>
   </blockquote>
+
  </div>
+ <% end %>
+</div>
+  
+</div>
+<div class="clear"></div>
+<div class= "booyah-box col-10 offset-1" >
+<h2 class= "text-center">My Places</h2>
+
+<% @user.places.each do |place| %>
+
+
+
+  <h1><%= link_to place.name, place_path(place) %></h1><br />
+  <i><%= place.address %></i><br />
+  <p><%= place.description %></p><br />
+
+  <% if place.user.present? %>
+  <small><%= place.user.email %></small>
+  <% end %>
+  
+
   <% end %>
 </div>
